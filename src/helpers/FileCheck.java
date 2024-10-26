@@ -24,6 +24,11 @@ public final class FileCheck {
 					//  Lowercase all words to avoid multiple inputs of the same word
 					String word = st.sval.toLowerCase();
 
+					//  Remove trailing dots
+					if (word.charAt(word.length() - 1) == '.') {
+						word = word.substring(0, word.length() - 1);
+					}
+
 					//  Add word to Database if it's new
 					if (!indexDB.containsKey(word)) {
 						ArrayList<String> newArr = new ArrayList<>();
@@ -45,5 +50,17 @@ public final class FileCheck {
 		}
 	}
 
-	public static void tokenizeDir(File dir) {}
+	//  Traverse non-empty directories and recursively
+	//  search until the entire hierarchy has been exhausted
+	public static void tokenizeDir(File dir) {
+		if (dir.listFiles().length > 0) {
+			for (File file : dir.listFiles()) {
+				if (file.isDirectory()) {
+					tokenizeDir(file);
+				} else if (file.isFile()) {
+					tokenizeFile(file);
+				}
+			}
+		}
+	}
 }

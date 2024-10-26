@@ -16,6 +16,7 @@ public class Main {
 		HashMap<String, ArrayList<String>> indexDB = Index.indexDB;
 
 		while (!command.equals("exit")) {
+			//  Index a file
 			if (command.contains("index")) {
 				//  Extract file
 				String pathToFile = command.split(" ")[1];
@@ -34,12 +35,14 @@ public class Main {
 				} else if (file.isDirectory()) {
 					tokenizeDir(file);
 				} else {
-					System.out.println("This is not a file nor a directory");
+					System.out.println("This is not a valid file nor a directory");
 					command = in.nextLine();
 					continue;
 				}
 
 				System.out.println("Successful tokenization for " + pathToFile);
+
+			//  Query the Database
 			} else if (command.contains("query")) {
 				String givenWord = command.split(" ")[1];
 
@@ -47,11 +50,10 @@ public class Main {
 					for (String filename : indexDB.get(givenWord)) {
 						System.out.printf(filename + " ");
 					}
+					System.out.println();
 				} else {
 					System.out.println("No file contains \"" + givenWord + "\"");
 				}
-
-				System.out.println();
 
 			//  Case for typos/wrong command
 			} else {
