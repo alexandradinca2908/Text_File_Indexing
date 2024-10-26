@@ -14,6 +14,13 @@
 
     ANY OTHER COMMAND WILL NOT HAVE AN EFFECT!
 
+## Command examples:
+    index path/to/file
+    index path/to/dir
+    query flowers (returns file7 and file4)
+    query nothing (returns error message)
+    exit
+
 ##  Description
     Main class contains the executable bit, where a while loop runs until it is told
     to stop. Valid commands are: index, query, exit. 
