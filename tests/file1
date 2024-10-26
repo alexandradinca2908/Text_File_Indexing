@@ -1,0 +1,9 @@
+Software design patterns are important tools developers, providing proven solutions to common problems encountered during software development. This article will act as tutorial to help you understand the concept of design patterns. Developers can create more robust, maintainable, and scalable software systems by understanding and applying these patterns.
+What are Design Patterns?
+Reusable solutions for typical software design challenges are known as design patterns. Expert object-oriented software engineers use these best practices to write more structured, manageable, and scalable code. Design patterns provide a standard terminology and are specific to particular scenarios and problems. Design patterns are not finished code but templates or blueprints only.
+
+Key Characteristics of Design Patterns
+Reusability: Patterns can be applied to different projects and problems, saving time and effort in solving similar issues.
+Standardization: They provide a shared language and understanding among developers, helping in communication and collaboration.
+Efficiency: By using these popular patterns, developers can avoid finding the solution to same recurring problems, which leads to faster development.
+Flexibility: Patterns are abstract solutions/templates that can be adapted to fit various scenarios and requirements.
