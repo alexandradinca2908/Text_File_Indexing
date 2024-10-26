@@ -15,15 +15,16 @@
     ANY OTHER COMMAND WILL NOT HAVE AN EFFECT!
 
 ##  Description
-Main class contains the executable bit, where a while loop runs until it is told
-to stop. Valid commands are: index, query, exit. 
+    Main class contains the executable bit, where a while loop runs until it is told
+    to stop. Valid commands are: index, query, exit. 
+    
+    Index command requires tokenization, which can be found in FileCheck class.
+    Tokenization works with the help of a StreamTokenizer, from which only words are selected.
+    Tokenizing a file means extracting all words as tokens individually, while tokenizing a
+    directory means recursively traversing it and tokenizing all its contents.
+    
+    Lastly, we have the global "database" of the app, which is a HashMap containing all indexes;
+    it is found in Index class
 
-Index command requires tokenization, which can be found in FileCheck class.
-Tokenization works with the help of a StreamTokenizer, from which only words are selected.
-Tokenizing a file means extracting all words as tokens individually, while tokenizing a
-directory means recursively traversing it and tokenizing all its contents.
-
-Lastly, we have the global "database" of the app, which is a HashMap containing all indexes;
-it is found in Index class
-
-### Note: this app is primitive; from an OOP perspective, it should rely more on encapsulation
+### Note1: required classes are found in src and src/helpers
+### Note2: this app is primitive; from an OOP perspective, it should rely more on encapsulation
